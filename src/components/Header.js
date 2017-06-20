@@ -25,11 +25,15 @@ const TopBar = styled.div`
 
 const Header = () => {
   return (
-    <TopBar>
-      <img src={logo} className="redux-logo" alt="logo" />
-      <h2>Welcome to Create Redux App</h2>
-      <a href="/">Home</a>
-      <a href="/geoMap">Geo Map</a>
+    <TopBar className="row">
+      <div className="col-xs-12">
+        <h2>Welcome to Create Redux App</h2><br />
+        <img src={logo} className="redux-logo" alt="logo" />
+      </div>
+      <div className="col-xs-12">
+        <a href="/" className="btn btn-sm btn-link">Home</a>
+        <a href="/geoMap" className="btn btn-sm btn-link">Geo Map</a>
+      </div>
     </TopBar>
   )
 }

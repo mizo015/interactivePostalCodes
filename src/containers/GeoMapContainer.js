@@ -15,19 +15,21 @@ class GeoMapContainer extends React.Component {
 		return (
 			<div>
 				<h1>Geo Map Container</h1>
-				<GoogleMapContainer />
+				<div className="row">
+					<div className="col-xs-12 col-sm-8">
+						<GoogleMapContainer
+							zoom={11} center={{lat: 59.95, lng: 30.33}}
+						/>
+					</div>
+					<div className="col-xs-12 col-sm-2">
+						{ 'CONTROLS WILL GO HERE...'}
+					</div>
+				</div>
 			</div>
 		)
 	}
 }
 
-
-// const mapStateToProps = createStructuredSelector({
-//   locations: createSelector(
-//     (state) => state.locations,
-//     (counterState) => counterState
-//   ),
-// })
 
 function mapDispatchToProps (dispatch) {
   return bindActionCreators(LocationsActions, dispatch)

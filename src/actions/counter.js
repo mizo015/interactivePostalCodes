@@ -7,6 +7,8 @@ export const decrement = createAction(DECREMENT_COUNTER)
 
 export const incrementIfOdd = createAction(INCREMENT_COUNTER_IF_ODD)
 
+
+
 // export function incrementIfOdd() {
 //   return (dispatch, getState) => {
 //     const { counter } = getState()

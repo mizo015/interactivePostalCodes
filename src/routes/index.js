@@ -12,7 +12,7 @@ class Routes extends Component {
   render() {
     return (
       <Router>
-        <Container>
+        <Container className="container-fluid">
           <Header />
            <Route exact path="/" component={CounterContainer} />
            <Route path="/geoMap" component={GeoMapContainer} title="Component Title"/> 

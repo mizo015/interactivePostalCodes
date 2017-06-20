@@ -1,12 +1,15 @@
-import { REQUEST_LOCATIONS } from '../constants/ActionTypes'
+import { REQUEST_LOCATIONS, ADD_LOCATION } from '../constants/ActionTypes'
 
-
-export default function locations(state = [], action){
+export default function locations(state = {
+	locationsList: [],
+	selectedLocation: null,
+	
+}, action){
 	console.log("LOCATIONS REDUCER CALLED");
 	
 	switch (action.type) {
-		case REQUEST_LOCATIONS:
-			return [{id:0, name:"Edison, NJ"}, {id:1, name:"Woodbridge, NJ"}]
+		case ADD_LOCATION:
+			return {...state, locationsList: [...state.locationsList, action.postalcode]}
 		default:
 			return state;
 	}
